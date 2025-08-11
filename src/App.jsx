@@ -1,34 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Lanyard from './components/Lanyard/Lanyard.jsx'
+import Header from './components/header.jsx';
+import Home from './components/home.jsx';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react'
+import Skills from './components/skills.jsx';
+import Education from './components/education.jsx';
+import Work from './components/work.jsx';
+import Project from './components/projects.jsx';
+import Contact from './components/Contact.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='dark:text-white dark:bg-[#171c27]'>
+      <Header />
+      <div className='pt-[100px]'>
+        <Home />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Skills />
+      <Education />
+      <Work />
+      <Project />
+      <Contact />
+    </div>
   )
 }
 

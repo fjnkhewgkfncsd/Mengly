@@ -1,68 +1,79 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
+/* Use class-based dark mode in Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'Agustina';
+    src: url('./assets/font/Agustina.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/font/Montserrat-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} 
+/* Hide the thumb */
+.no-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35rem;
+  height: 1.2rem;
+  border-radius: 9999px;
+  background: #e5e7eb;
+  overflow: hidden;
+  position: relative;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@media (max-width:1024px) {
+    .no-thumb {
+        width:20rem;
+        height:1rem;
+    }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Optional: show filled progress using a gradient (adjust #55198b) */
+.no-thumb[value] {
+  background: linear-gradient(#55198b 0 0) 0/ calc(var(--val, 0) * 1%) 100% no-repeat, #e5e7eb;
+}
+
+/* WebKit thumb (hidden) */
+.no-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+/* Firefox thumb (hidden) */
+.no-thumb::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+/* IE/Edge (legacy) */
+.no-thumb::-ms-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+/* Remove default track styles for consistency */
+.no-thumb::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background: transparent;
+}
+.no-thumb::-moz-range-track {
+  background: transparent;
+}
+.no-thumb::-ms-track {
+  background: transparent;
+  border: none;
+  color: transparent;
 }
