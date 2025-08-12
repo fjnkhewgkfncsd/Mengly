@@ -1,7 +1,6 @@
-/* eslint-disable react/no-unknown-property */
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Canvas, extend, useFrame } from "@react-three/fiber";
+import { Canvas, extend, useFrame , useThree } from "@react-three/fiber";
 import {
   useGLTF,
   useTexture,
@@ -24,6 +23,15 @@ import lanyard from "./lanyard.png";
 
 import * as THREE from "three";
 
+function FovUpdater({ fov }) {
+  const { camera } = useThree();
+  useEffect(() => {
+    camera.fov = fov;
+    camera.updateProjectionMatrix();
+  }, [fov, camera]);
+  return null;
+}
+
 extend({ MeshLineGeometry, MeshLineMaterial });
 
 export default function Lanyard({
@@ -40,7 +48,7 @@ export default function Lanyard({
         onCreated={({ gl }) =>
           gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)
         }
-      >
+      > <FovUpdater fov={fov} />
         <ambientLight intensity={Math.PI} />
         <Physics gravity={gravity} timeStep={1 / 60}>
           <Band />

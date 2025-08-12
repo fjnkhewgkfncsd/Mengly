@@ -7,5 +7,10 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     react()],
+    server : {
+      host : true,
+      port : 8080,
+      strictPort : true
+    },
   assetsInclude: ['**/*.glb', '**/*.gltf']
 })

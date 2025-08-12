@@ -29,10 +29,17 @@
   position: relative;
 }
 
-@media (max-width:1024px) {
+@media (max-width:1100px) {
     .no-thumb {
         width:20rem;
         height:1rem;
+    }
+}
+
+@media (max-width:768px) {
+    .no-thumb {
+        width:12rem;
+        height:0.7rem;
     }
 }
 
@@ -76,4 +83,7 @@
   background: transparent;
   border: none;
   color: transparent;
+}
+html{
+  overflow-x:hidden;
 }

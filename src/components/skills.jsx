@@ -129,13 +129,12 @@ const techStacks = [
     return (
         <div className="font-[Montserrat, sans-serif]" id='skills'>
             <div className="flex flex-wrap">
-                <div data-aos="fade-down-right" className="w-full md:w-1/2 lg:pt-8">
+                <div data-aos="fade-down-right" className="md:w-1/2  lg:pt-8">
                 <DisplayLottie animationData={codingPerson} />
                 </div>
-
-                <div data-aos="fade-up-left"  className="flex flex-col gap-8 md:w-1/2 xl:pr-32 lg:pr-0">
-                    <h1 className="xl:text-6xl lg:text-5xl text-black dark:text-white">What I do</h1>
-                    <div className="text-white flex gap-4 text-lg">
+                <div data-aos="fade-up-left"  className="flex flex-col md:gap-8 gap-4 md:w-1/2 xl:pr-32 lg:pr-0 md:pl-0 pl-4">
+                    <h1 className="xl:text-6xl lg:text-5xl text-2xl text-black dark:text-white">What I do</h1>
+                    <div className="text-white flex gap-4 md:text-lg text-md">
                         {['Tech Stacks', 'Tools'].map(tab => (
                         <button
                             key={tab}
@@ -148,18 +147,18 @@ const techStacks = [
                         </button>
                         ))}
                     </div>
-                        <p className="text-gray-400 xl:text-xl lg:text-lg">
+                        <p className="text-gray-400 xl:text-xl md:text-lg text-sm">
                         CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK
                         </p>
                     <div>
                         {activeTab === 'Tech Stacks' && (
-                        <ul className="flex gap-8 flex-wrap">
+                        <ul className="flex md:gap-8 gap-7 flex-wrap">
                             {techStacks.map(s => (
                             <li
                                 key={s.label}
                                 className="group flex flex-col items-center gap-2 hover:text-[#74c0fc] transition-colors"
                             >
-                                <span className="xl:text-5xl lg:text-4xl xl:[&>svg]:w-12 lg:[&>svg]:w-10 xl:[&>svg]:h-12 lg:[&>svg]:h-10 [&>svg]:text-black dark:[&>svg]:text-white [&>svg]:transition-colors group-hover:[&>svg]:text-[#87c7f7]">
+                                <span className="xl:text-5xl lg:text-4xl text-3xl xl:[&>svg]:w-12 lg:[&>svg]:w-10 [&>svg]:w-9 [&>svg]:h-9 xl:[&>svg]:h-12 lg:[&>svg]:h-10 [&>svg]:text-black dark:[&>svg]:text-white [&>svg]:transition-colors group-hover:[&>svg]:text-[#87c7f7]">
                                 {s.icon}
                                 </span>
                                 <span className="text-sm tracking-wide group-hover:text-[#87c7f7]">
@@ -171,13 +170,13 @@ const techStacks = [
                         )}
 
                         {activeTab === 'Tools' && (
-                        <ul className="flex gap-8 flex-wrap">
+                        <ul className="flex md:gap-8 gap-7 flex-wrap">
                             {tools.map(s => (
                             <li
                                 key={s.label}
                                 className="group flex flex-col items-center gap-2 hover:text-[#74c0fc] transition-colors"
                             >
-                                <span className="text-5xl [&>svg]:w-12 [&>svg]:h-12 [&>svg]:text-black dark:[&>svg]:text-white [&>svg]:transition-colors group-hover:[&>svg]:text-[#87c7f7]">
+                                <span className="md:text-5xl md:[&>svg]:w-12 md:[&>svg]:h-12 [&>svg]:w-9 [&>svg]:h-9 [&>svg]:text-black dark:[&>svg]:text-white [&>svg]:transition-colors group-hover:[&>svg]:text-[#87c7f7]">
                                 {s.icon}
                                 </span>
                                 <span className="text-sm tracking-wide group-hover:text-[#87c7f7]">
@@ -190,9 +189,9 @@ const techStacks = [
                     </div>
                 </div>
             </div>
-            <div className='flex px-20 pt-20'>
-                <div className='w-1/2 xl:text-2xl lg:text-lg space-y-4' data-aos="flip-left">
-                  <h1 className='xl:text-6xl lg:text-5xl pb-2'>Proficiency</h1>
+            <div className='flex md:px-20 px-4 md:pt-20 pt-10'>
+                <div className='w-1/2 xl:text-2xl lg:text-lg md:space-y-4 space-y-1' data-aos="flip-left">
+                  <h1 className='xl:text-6xl lg:text-5xl text-2xl pb-2'>Proficiency</h1>
                   <div >
                     <h1>Frontend</h1>
                     <input type="range" value={75}  className='no-thumb' style={{ '--val': 75 }}/>
@@ -206,7 +205,7 @@ const techStacks = [
                     <input type="range" value={50} className='no-thumb' style={{ '--val': 50 }}/>
                   </div>
                 </div>
-                <div className='w-1/2 lg:pt-16' data-aos="zoom-in-up">
+                <div className='w-1/2 xl:pt-0 lg:pt-16 pt-22' data-aos="zoom-in-up">
                   <DisplayLottie animationData={Build}/>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 import contact from '../assets/lottie/contact.mp4';
 const Contact = () => {
     return (
-        <div style={{fontFamily:'Monserrat, sans-serif'}} className='px-20 space-y-12 pb-12' id='contact' data-aos="zoom-out">
-            <h1 className='xl:text-6xl lg:text-5xl'>Contact</h1>
+        <div  className='md:px-20 px-4 md:space-y-12 pb-12' id='contact' data-aos="zoom-out">
+            <h1 className='xl:text-6xl lg:text-5xl text-2xl'>Contact</h1>
             <div className='flex'>
-                <div className=''>
+                <div className='hidden md:inline-block'>
                     <video
                         src={contact}           // or "/project-demo.mp4" if in public
                         className='rounded-lg xl:w-[400px] xl:h-[400px] lg:w-[300px] lg:h-[300px]'
@@ -15,8 +15,8 @@ const Contact = () => {
                         poster={contact}          // fallback poster image while loading
                     />
                 </div>
-                <div className='space-y-4 pl-52 h-[130px] flex flex-col justify-center pt-24'>
-                    <h2 className='xl:text-4xl lg:text-3xl pb-4'>Reach Me Out</h2>
+                <div className='md:space-y-4 md:pl-52 h-[130px] flex flex-col justify-center md:pt-24 ' style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                    <h2 className='xl:text-4xl lg:text-3xl md:pb-4'>Reach Me Out</h2>
                     <div className='flex flex-col gap-4'>
                         Email : Mengly.heng@student.cadt.edu.kh
                         <div data-aos="fade-up"  className='text-3xl flex gap-8'>

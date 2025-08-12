@@ -6,6 +6,9 @@ export default {
     ],
     theme: {
         extend: {
+            screens: {
+                'xs': '415px', // custom breakpoint
+            },
             fontFamily: {
                 'agustina': ['Agustina', 'sans-serif']
             },
