@@ -1,7 +1,7 @@
 import Layard from './Lanyard/Lanyard.jsx';
 import { Link } from 'react-scroll';
 import useWindowSize from '../utils/useWindowSize.jsx';
-import { useEffect } from 'react'
+
 const Home = () => {
     const { width, height } = useWindowSize();
     let canvaSize;
@@ -38,8 +38,8 @@ const Home = () => {
             </div>
             <div data-aos="fade-up" className='flex gap-8 xl:text-2xl lg:text-lg text-white cursor-pointer l:py-8 py-4' style={{fontFamily: 'Montserrat, sans-serif'}}>
                 <Link to='contact' smooth={true} duration={500} className='xl:w-48 lg:w-32 w-30 rounded-lg xl:h-12 bg-[#55198b] flex items-center justify-center'>Contact Me</Link>
-                <a href="../../public/resume.jpg"
-                download="resume.jpg"
+                <a href="../assets/resume/Heng_Mengly_CV.pdf"
+                download="Heng_Mengly_CV.pdf"
                 >
                     <button className='px-8 h-12 bg-[#55198b] rounded-lg flex items-center justify-center cursor-pointer'>
                         Download My Resume
