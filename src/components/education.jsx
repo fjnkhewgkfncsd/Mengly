@@ -13,6 +13,7 @@ const Education = () => {
                         <h3 className='xl:text-2xl lg:text-xl text-md'>Bachelor In Computer Science Specialized In Software Engineering</h3>
                         <h3 className='xl:text-lg lg:text-md font-normal'>February 2024 - Now</h3>
                         <h3 className='xl:text-lg lg:text-md font-normal'>Third-Year student</h3>
+                        <h3 className='xl:text-lg lg:text-md font-normal'>GPA 3.5</h3>
                     </div>
                 </div>
             </div>

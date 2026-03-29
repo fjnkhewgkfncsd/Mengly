@@ -23,7 +23,7 @@ const Home = () => {
                         <h1 className='xl:text-7xl lg:text-4xl font-semibold text-3xl'>Hey there, I'm Heng Mengly
                             <span className="wave-emoji">👋</span>
                         </h1>
-                    <p className='xl:text-3xl lg:text-xl'>A passionate Full Stack Software Developer having an experience of building Web applications with JavaScript / React.js / Nodejs / Html and some other cool libraries and frameworks.</p>
+                    <p className='xl:text-3xl lg:text-xl'>A passionate Full Stack Software Developer having an experience of building Web applications with JavaScript / React.js / Nodejs / Html / flutter / firebase and some other cool libraries and frameworks.</p>
                 </div>
                 <div className='absolute lg:top-[-100px] lg:right-12 top-[-170px] right-[-20px] w-1/2 overflow-hidden'>
                     <Layard fov={canvaSize}/>
@@ -39,7 +39,8 @@ const Home = () => {
             <div data-aos="fade-up" className='flex gap-8 xl:text-2xl lg:text-lg text-white cursor-pointer l:py-8 py-4' style={{fontFamily: 'Montserrat, sans-serif'}}>
                 <Link to='contact' smooth={true} duration={500} className='xl:w-48 lg:w-32 w-30 rounded-lg xl:h-12 bg-[#55198b] flex items-center justify-center'>Contact Me</Link>
                 <a href="../assets/resume/Heng_Mengly_CV.pdf"
-                download="Heng_Mengly_CV.pdf"
+                    download="Heng_Mengly_CV.pdf"
+                    
                 >
                     <button className='px-8 h-12 bg-[#55198b] rounded-lg flex items-center justify-center cursor-pointer'>
                         Download My Resume
